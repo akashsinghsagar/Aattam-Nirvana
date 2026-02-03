@@ -71,12 +71,20 @@ export default function Header() {
               />
               <div className="absolute -inset-1 bg-primary-500/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <span
-              className="text-lg sm:text-2xl font-poppins font-extrabold tracking-tight text-white transition-colors duration-300"
-              style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2)' }}
-            >
-              AattamNirvana
-            </span>
+            <div className="flex flex-col items-start">
+              <span
+                className="text-lg sm:text-2xl font-poppins font-extrabold tracking-tight text-white transition-colors duration-300"
+                style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 6px rgba(0, 0, 0, 0.2)' }}
+              >
+                AattamNirvana
+              </span>
+              <span
+                className="text-[10px] sm:text-xs font-bold text-white tracking-tight leading-none self-end -mt-0.5"
+                style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}
+              >
+                Heart Let Journey
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
