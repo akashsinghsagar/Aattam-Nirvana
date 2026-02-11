@@ -24,7 +24,7 @@ const config: Config = {
         },
         accent: {
           purple: '#ba8aef',
-          gold: '#ffd966',
+          gold: '#e6be74',
         },
       },
       fontFamily: {
