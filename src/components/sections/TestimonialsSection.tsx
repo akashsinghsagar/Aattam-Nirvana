@@ -92,7 +92,7 @@ export default function TestimonialsSection() {
                         <p className="text-base sm:text-lg font-poppins font-bold text-white">
                           {testimonials[0].author}
                         </p>
-                        <p className="text-xs sm:text-sm text-accent-purple font-medium">
+                        <p className="text-xs sm:text-sm text-accent-gold font-medium">
                           {testimonials[0].title}
                         </p>
                       </div>
@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
                 <motion.div
                   whileHover={{ x: 8, y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-primary-900 border border-primary-700 rounded-xl p-4 sm:p-5 md:p-6 shadow-purple-sm hover:shadow-purple-md 
+                  className="bg-primary-800 border border-primary-700 rounded-xl p-4 sm:p-5 md:p-6 shadow-purple-sm hover:shadow-purple-md 
                            transition-shadow"
                 >
                   {/* Rating - Mobile Responsive */}
@@ -136,7 +136,7 @@ export default function TestimonialsSection() {
                       <p className="text-xs sm:text-sm font-poppins font-bold text-white">
                         {testimonial.author}
                       </p>
-                      <p className="text-xs text-accent-purple">
+                      <p className="text-xs text-accent-gold">
                         {testimonial.title}
                       </p>
                     </div>
@@ -146,32 +146,6 @@ export default function TestimonialsSection() {
             ))}
           </StaggerContainer>
         </div>
-
-        {/* Bottom Stats Bar */}
-        <FadeInUp delay={0.5}>
-          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { value: '5.0', label: 'Average Rating', icon: Star },
-              { value: '500+', label: 'Happy Clients', icon: Heart },
-              { value: '98%', label: 'Success Rate', icon: null },
-              { value: '100%', label: 'Confidential', icon: null },
-            ].map((stat) => (
-              <motion.div
-                key={stat.label}
-                whileHover={{ y: -3 }}
-                className="text-center p-4 bg-primary-900/30 rounded-xl border border-primary-700"
-              >
-                <div className="flex items-center justify-center gap-1.5 mb-1.5">
-                  {stat.icon && <stat.icon className="w-4 h-4 text-[#ffd966] fill-current" />}
-                  <p className="text-2xl md:text-3xl font-bold text-white font-poppins">
-                    {stat.value}
-                  </p>
-                </div>
-                <p className="text-xs text-white/70">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </FadeInUp>
       </div>
     </section>
   )

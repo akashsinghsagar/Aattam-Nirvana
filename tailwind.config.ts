@@ -22,6 +22,10 @@ const config: Config = {
           200: '#e8d2f9', // Very subtle
           100: '#f4e8fc', // Almost white
         },
+        accent: {
+          purple: '#ba8aef',
+          gold: '#ffd966',
+        },
       },
       fontFamily: {
         poppins: ['var(--font-poppins)', 'sans-serif'],

@@ -39,89 +39,22 @@ export default function CTASection() {
                 </div>
               </FadeInUp>
             </div>
-
-              {/* Right - Static Feature Cards */}
-            <div className="lg:col-span-5 relative hidden lg:block">
-              <div className="relative h-80">
-                {/* Card 1 - 25% smaller */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="absolute top-0 right-0 bg-primary-900 rounded-xl p-4 shadow-2xl max-w-[165px]"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-9 h-9 bg-primary-100 rounded-lg flex items-center justify-center">
-                      <Heart className="w-5 h-5 text-primary-600 fill-current" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 font-medium">Free</p>
-                      <p className="text-base font-bold text-primary-600 font-poppins">Discovery</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-600">No pressure conversation</p>
-                </motion.div>
-
-                {/* Card 2 - 25% smaller */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.5 }}
-                  className="absolute bottom-16 left-0 bg-primary-600 rounded-xl p-4 shadow-2xl max-w-[150px]"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center">
-                      <Shield className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-white/80 font-medium">100%</p>
-                      <p className="text-base font-bold text-white font-poppins">Private</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-white/80">Safe space</p>
-                </motion.div>
-
-                {/* Card 3 - 25% smaller */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 0.6 }}
-                  className="absolute bottom-0 right-10 bg-primary-900 rounded-xl p-4 shadow-2xl max-w-[150px]"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <div className="w-9 h-9 bg-accent-cyan/10 rounded-lg flex items-center justify-center">
-                      <Clock className="w-5 h-5 text-accent-cyan" />
-                    </div>
-                    <div>
-                      <p className="text-xs text-gray-500 font-medium">Online</p>
-                      <p className="text-base font-bold text-gray-900 font-poppins">Sessions</p>
-                    </div>
-                  </div>
-                  <p className="text-xs text-gray-600">Worldwide</p>
-                </motion.div>
-              </div>
-            </div>
           </div>
 
         {/* Trust Badges - Mobile Optimized */}
         <FadeInUp delay={0.4}>
           <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 md:pt-10 border-t border-white/10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-3 sm:gap-4 max-w-xl mx-auto">
               {[
                 { icon: Heart, value: 'Free', label: 'Discovery Call' },
-                { icon: Shield, value: '100%', label: 'Confidential' },
                 { icon: Clock, value: 'Online', label: 'Sessions' },
-                { icon: Sparkles, value: '500+', label: 'Lives Changed' },
               ].map((item) => (
                 <motion.div
                   key={item.label}
                   whileHover={{ y: -3 }}
                   className="text-center p-2.5 sm:p-3 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10"
                 >
-                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent-purple mx-auto mb-1 sm:mb-1.5" />
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-accent-gold mx-auto mb-1 sm:mb-1.5" />
                   <p className="text-base sm:text-lg md:text-xl font-bold text-white mb-0.5">{item.value}</p>
                   <p className="text-[9px] sm:text-[10px] md:text-xs text-white/70 leading-tight">{item.label}</p>
                 </motion.div>

@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FadeInUp } from '@/components/animations'
+import LightRays from '@/components/effects/LightRays'
 import { Mail, Phone, MapPin, Send, CheckCircle, Loader2 } from 'lucide-react'
 
 export default function ContactPage() {
@@ -49,7 +50,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-primary-800 pt-24 pb-12">
+    <div className="relative min-h-screen bg-primary-700 pt-24 pb-12">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute inset-0 opacity-[0.03]" 
@@ -257,6 +258,21 @@ export default function ContactPage() {
             </FadeInUp>
           </div>
         </div>
+      </div>
+      
+      {/* Global Fixed Ambient Light Layer - Blended on Top */}
+      <div className="fixed inset-0 w-full h-screen z-[10] pointer-events-none mix-blend-screen opacity-75">
+        <LightRays 
+          raysOrigin="top-center"
+          raysColor="#ffd966"
+          raysSpeed={0.5}
+          lightSpread={3.0}
+          rayLength={5.0}
+          pulsating={true}
+          fadeDistance={1.5}
+          saturation={1.8}
+          opacity={0.5}
+        />
       </div>
     </div>
   )

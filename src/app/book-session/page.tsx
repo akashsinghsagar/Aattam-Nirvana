@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import LightRays from '@/components/effects/LightRays'
 
 export default function BookSessionPage() {
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function BookSessionPage() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-primary-800 pt-24 pb-12">
+    <div className="relative min-h-screen bg-primary-700 pt-24 pb-12">
       <div className="container-main">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8">
@@ -35,6 +36,21 @@ export default function BookSessionPage() {
             style={{ minWidth: '320px', height: '700px' }}
           />
         </div>
+      </div>
+      
+      {/* Global Fixed Ambient Light Layer - Blended on Top */}
+      <div className="fixed inset-0 w-full h-screen z-[10] pointer-events-none mix-blend-screen opacity-75">
+        <LightRays 
+          raysOrigin="top-center"
+          raysColor="#ffd966"
+          raysSpeed={0.5}
+          lightSpread={3.0}
+          rayLength={5.0}
+          pulsating={true}
+          fadeDistance={1.5}
+          saturation={1.8}
+          opacity={0.5}
+        />
       </div>
     </div>
   )

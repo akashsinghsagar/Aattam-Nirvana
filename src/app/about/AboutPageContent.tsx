@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Button from '@/components/ui/Button'
 import profileImg from '@/assets/profile.jpg'
+import LightRays from '@/components/effects/LightRays'
 import { 
   FadeInUp, 
   SlideInLeft, 
@@ -78,7 +79,7 @@ const achievements = [
 
 export default function AboutPageContent() {
   return (
-    <>
+    <div className="relative bg-primary-700">
       {/* Hero Section - Editorial Style - Mobile Responsive */}
       <section className="relative min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] bg-primary-700 overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-24">
 
@@ -174,8 +175,6 @@ export default function AboutPageContent() {
 
       {/* Introduction Section - Bento Style - Mobile Responsive */}
       <section className="py-10 sm:py-12 md:py-14 bg-primary-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
         
         <div className="container-main relative z-10">
           <div className="grid lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12">
@@ -272,8 +271,6 @@ export default function AboutPageContent() {
 
       {/* Journey Timeline - Creative Layout */}
       <section className="py-10 sm:py-12 md:py-14 bg-primary-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent-purple/10 rounded-full blur-3xl" />
         
@@ -345,8 +342,6 @@ export default function AboutPageContent() {
       {/* Mission Section */}
       <section className="py-10 sm:py-12 md:py-14 bg-primary-800 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary-900/60 via-primary-800/40 to-primary-900/60" />
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
         <div className="container-main relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <FadeInUp>
@@ -391,8 +386,6 @@ export default function AboutPageContent() {
 
       {/* Message to Women - Asymmetric Layout */}
       <section className="py-10 sm:py-12 md:py-14 bg-primary-800">
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
         <div className="container-main relative z-10">
           <div className="max-w-4xl mx-auto">
             <SlideInRight>
@@ -457,8 +450,6 @@ export default function AboutPageContent() {
 
       {/* Core Values - Bento Grid */}
       <section className="py-10 sm:py-12 md:py-14 bg-primary-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
         
         <div className="container-main relative z-10">
           <FadeInUp>
@@ -497,38 +488,6 @@ export default function AboutPageContent() {
                 </motion.div>
               </StaggerItem>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements - Creative Stats Bar */}
-      <section className="py-10 sm:py-12 md:py-14 bg-primary-800 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.03]" 
-             style={{backgroundImage: 'linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px)', backgroundSize: '60px 60px'}} />
-        
-        <div className="container-main relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              {achievements.map((stat, index) => (
-                <StaggerItem key={stat.label}>
-                  <motion.div
-                    whileHover={{ y: -8, scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="text-center p-8 bg-primary-900 rounded-2xl border border-primary-700 shadow-purple-sm 
-                             hover:shadow-purple-md transition-all group"
-                  >
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-accent-purple flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <span className="text-2xl font-bold text-white">{stat.number.charAt(0)}</span>
-                    </div>
-                    <p className="text-4xl md:text-5xl font-poppins font-bold text-accent-purple mb-2 
-                               group-hover:text-white transition-colors">
-                      {stat.number}
-                    </p>
-                    <p className="text-white/80 font-medium">{stat.label}</p>
-                  </motion.div>
-                </StaggerItem>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -599,6 +558,21 @@ export default function AboutPageContent() {
           </div>
         </div>
       </section>
-    </>
+      
+      {/* Global Fixed Ambient Light Layer - Blended on Top */}
+      <div className="fixed inset-0 w-full h-screen z-[10] pointer-events-none mix-blend-screen opacity-75">
+        <LightRays 
+          raysOrigin="top-center"
+          raysColor="#ffd966"
+          raysSpeed={0.5}
+          lightSpread={3.0}
+          rayLength={5.0}
+          pulsating={true}
+          fadeDistance={1.5}
+          saturation={1.8}
+          opacity={0.5}
+        />
+      </div>
+    </div>
   )
 }

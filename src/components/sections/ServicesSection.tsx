@@ -10,7 +10,7 @@ import Link from 'next/link'
 const services = [
   {
     image: 'https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&auto=format&fit=crop&q=80',
-    title: 'Trauma Healing Sessions',
+    title: 'Trauma Healing',
     description: 'One-on-one personalized sessions to help you process and heal from past trauma with compassionate guidance.',
     duration: '60 mins',
     rating: 5,
@@ -18,9 +18,17 @@ const services = [
   },
   {
     image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=80',
-    title: 'Aattam 12-Week Program',
-    description: 'A comprehensive transformative journey to reclaim your voice, rediscover inner strength, and embrace your true self.',
-    duration: '12 weeks',
+    title: 'Soul Liberation Journey: 6-week Programme',
+    description: 'A focused 6-week journey designed to help you break free from limiting beliefs and reclaim your authentic self.',
+    duration: '6 weeks',
+    rating: 5,
+    href: '/services#soul-liberation',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=80',
+    title: 'Aattam: 6-month Programme',
+    description: 'A comprehensive 6-month transformative journey to reclaim your voice, rediscover inner strength, and embrace your true self.',
+    duration: '6 months',
     rating: 5,
     href: '/services#aattam-program',
     featured: true,
@@ -31,7 +39,23 @@ const services = [
     description: 'Connect with a supportive community of women on similar healing journeys through facilitated group sessions.',
     duration: '2 hours',
     rating: 4.9,
-    href: '/services#workshops',
+    href: '/services#group-workshops',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&auto=format&fit=crop&q=80',
+    title: 'Values Workshop',
+    description: 'Discover and align with your core values to create a life of authenticity and purpose.',
+    duration: '3 hours',
+    rating: 5,
+    href: '/services#values-workshop',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=80',
+    title: 'Corporate',
+    description: 'Tailored wellness and empowerment programs for corporate teams to foster psychological safety and growth.',
+    duration: 'Customizable',
+    rating: 5,
+    href: '/services#corporate',
   },
 ]
 
