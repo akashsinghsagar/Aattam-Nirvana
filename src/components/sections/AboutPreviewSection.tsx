@@ -16,10 +16,10 @@ export default function AboutPreviewSection() {
         <FadeInUp className="mb-6 sm:mb-7 md:mb-8">
           <div className="max-w-2xl">
             <p className="text-white/90 font-semibold text-xs uppercase tracking-[0.2em] mb-3">
-              The Story Behind Aattam
+              And Now, I Walk Beside You
             </p>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-poppins font-bold text-[#c99a1d] leading-tight">
-              From Darkness to Light
+              From Silence to Self‑Liberation
             </h2>
           </div>
         </FadeInUp>
@@ -82,31 +82,32 @@ export default function AboutPreviewSection() {
               {/* Role Tags */}
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1.5 bg-primary-800 text-white rounded-full text-xs font-semibold">
-                  Trauma Healing Coach
+                  Trauma Liberator
                 </span>
                 <span className="px-3 py-1.5 bg-primary-800 text-white rounded-full text-xs font-semibold">
-                  Survivor Advocate
+                  Heart‑Led Facilitator
+                </span>
+                <span className="px-3 py-1.5 bg-primary-800 text-white rounded-full text-xs font-semibold">
+                  Soulful Guide
                 </span>
               </div>
 
               {/* Story Text */}
               <div className="space-y-4 text-white/90 leading-relaxed">
                 <p className="text-base md:text-lg">
-                  For over <span className="font-bold text-white">27 years</span>, I endured 
-                  the harrowing trials of domestic violence and emotional, verbal, and psychological abuse.
+                  My work is rooted in lived experience, deep study, and a profound understanding of what it means to lose yourself while holding everything together.
                 </p>
                 
                 <p className="text-sm md:text-base">
-                  Despite the dark times and the constant undermining of my worth and intelligence, 
-                  I wore a <span className="italic text-white">mask of contentment</span> and 
-                  became a people pleaser, sacrificing my dreams and living life on others' terms.
+                  For over twenty‑five years, I lived inside silence shaped by cultural conditioning, physical and emotional abuse, across two marriages and the belief that endurance was strength.
                 </p>
 
                 <p className="text-sm md:text-base">
-                  At the age of <span className="font-bold text-white">51</span>, with unwavering 
-                  support from a mentor and compassionate network, I embarked on a 
-                  <span className="font-semibold text-white"> transformative journey of healing 
-                  and self-discovery</span>.
+                  Until the day I chose myself. At <span className="font-bold text-white">51</span>, I walked away from survival and came home to my truth. I rebuilt my life from the inside out: healing trauma, breaking generational patterns, and redefining who I was allowed to be.
+                </p>
+                
+                <p className="text-sm md:text-base">
+                  That journey became my mission.
                 </p>
               </div>
 

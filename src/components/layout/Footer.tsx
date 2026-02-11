@@ -46,8 +46,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/90 text-xs sm:text-sm leading-relaxed mb-4 sm:mb-5 md:mb-6">
-              Empowering women to break free from trauma, cultural conditioning, and self-doubt. 
-              Your journey to healing and self-discovery starts here.
+              Heart led Journey
             </p>
             {/* Social Links - Mobile Optimized */}
             <div className="flex gap-2 sm:gap-2.5 md:gap-3">

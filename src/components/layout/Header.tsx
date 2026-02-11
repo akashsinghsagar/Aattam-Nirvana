@@ -82,7 +82,7 @@ export default function Header() {
                 className="text-[10px] sm:text-xs font-bold text-white tracking-tight leading-none self-end -mt-0.5"
                 style={{ textShadow: '0 1px 2px rgba(0, 0, 0, 0.3)' }}
               >
-                Heart Let Journey
+                Heart led Journey
               </span>
             </div>
           </Link>
